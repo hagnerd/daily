@@ -1,0 +1,26 @@
+# Functionality
+- [] init
+  - Ask user some questions:
+    - How many days is the challenge?
+    - write to tracker.json with the proper days
+- [] complete a day
+  - No Args
+  - if [day].log isEmpty 
+    - ask if user wants to add an entry
+    - if (input.toLowerCase() === y) accept input and add to log for the day
+  - else complete a day
+- [] skip
+  - Description: Skip a day (does not subtract from 100 days of code challenge, but allows you to track how many days you skipped) 
+  - Maybe an optional --excuse arg?
+- [] log
+  - Optional Arg: --day <number>, otherwise defaults to the current day
+- [] status
+- [] undo-day
+  - WARN USER
+  - undo completed day
+- [] undo-skip
+  - Subtract a skip
+- [] reset-log
+  - WARN USER
+  - Optional Arg: --day <number>, otherwise defaults to the current day 
+  - set log for the day to ''
