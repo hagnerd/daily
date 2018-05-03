@@ -10,3 +10,10 @@ Add installation details
 
 Add usage details
 
+### Init
+
+```
+daily init
+```
+
+Asks the user to input the number of days in the challenge. 
