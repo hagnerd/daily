@@ -1,5 +1,6 @@
 const editJsonFile = require('edit-json-file');
-const chalk = require('chalk');
+
+const { success, status, normal } = require('../utils/chalk');
 
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -7,17 +8,21 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-module.exports = (args) => {
-  console.log(chalk.green('Creating files...\n'));
+module.exports = () => {
+  normal('Creating files...');
+
+  // get tracker.json file
   let trackerFile = editJsonFile(`${__dirname}/../storage/tracker.json`);
 
-  console.log(chalk.yellow('How many days is your challenge?'));
 
-  rl.question('How many days in your challege?', (answer) => {
+  // prompt user for input
+  rl.question('How many days in your challenge?\n', (answer) => {
+
     trackerFile.set("untracked", Number(answer));
     trackerFile.save();
-    console.log(chalk.green(`Succesfully set the number of days to ${answer}.\n`));
-    console.log(chalk.magenta('Run "daily status" to see the current status of your challenge. \n'));
+
+    success(`Succesfully set the number of days to ${answer}.`);
+    status('Run "daily status" to see the current status of your challenge.');
     rl.close();
   });
 };
