@@ -1,0 +1,11 @@
+{
+  "name": "daily-cli",
+  "version": "1.0.0",
+  "license": "MIT",
+  "bin": {
+    "daily": "bin/daily"
+  },
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {}
+}
