@@ -1,5 +1,5 @@
 # Functionality
-- [] init
+- [x] init
   - Ask user some questions:
     - How many days is the challenge?
     - write to tracker.json with the proper days
